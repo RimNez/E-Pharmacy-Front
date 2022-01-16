@@ -1,0 +1,90 @@
+form {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(to right, #27b95f, #1565c0)
+}
+
+.box {
+    width: 500px;
+    padding: 40px;
+    position:-ms-page;
+    top: 50%;
+    left: 50%;
+    /*background: #cccccc;*/
+    text-align: center;
+    transition: 0.25s;
+    margin-top: 10px;
+    margin-left: 20%;
+}
+
+.box input[type="email"],
+.box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #cdd6d1;
+    padding: 10px 10px;
+    width: 250px;
+    outline: none;
+    color: rgb(253, 251, 251);
+    border-radius: 24px;
+    transition: 0.25s
+}
+
+.box h2 {
+    color: rgb(245, 250, 246);
+    text-transform: uppercase;
+    font-weight: 500
+}
+
+.box label {
+    color: rgb(245, 250, 246);
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 20px auto;
+    padding: 5px 10px;
+    width: 70px;
+}
+
+.box legend {
+    color: rgb(245, 250, 246);
+    font-weight: 300;
+   /* margin: 10px auto;*/
+    /*padding: 20px 5px;*/
+    /*width: 60px;*/
+}
+
+.box input[type="email"]:focus,
+.box input[type="password"]:focus {
+    width: 300px;
+    border-color: #2ecc71
+}
+
+.box button[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color:  rgb(248, 244, 244);
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer
+}
+
+.box button[type="submit"]:hover {
+    background: #2ecc71
+}
+
+.forgot {
+    text-decoration: underline
+}
+
+
+

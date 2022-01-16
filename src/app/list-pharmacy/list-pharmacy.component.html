@@ -1,0 +1,33 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <button type="submit" (click)="addPharmacy()" class="btn btn-success">Add Pharmacy</button>
+    </div>
+    <div class="panel-heading">
+        <h1>Pharmacies</h1>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Adresse</th>
+                    <th>Patente</th>
+                    <th>Téléphone</th>
+                    <th colspan="3">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pharmacy of pharmacies">
+                    <td>{{pharmacy.nom}}</td>
+                    <td>{{pharmacy.adresse}}</td>
+                    <td>{{pharmacy.patente}}</td>
+                    <td>{{pharmacy.tel}}</td>
+                   <!--<td><button class="btn btn-secondary" (click)="detailPharmacy(pharmacy.id)">Details</button></td>  -->       
+                    <td><button class="btn btn-primary" (click)="updatePharmacy(pharmacy.id,pharmacy)">Update</button></td>
+                    <td><button class="btn btn-danger" (click)="deletePharmacy(pharmacy.id)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
