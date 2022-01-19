@@ -29,6 +29,7 @@ export class CreatePharmacyComponent implements OnInit {
   }
 
   save() {
+    console.log(this.pharmacy)
     this.pharmacyService.createPharmacy(this.pharmacy,this.adminId)
       .subscribe(data => console.log(data), error => console.log(error));
     this.pharmacy = new Pharmacy();
@@ -37,6 +38,6 @@ export class CreatePharmacyComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     this.save();
-    this.router.navigate(['/pharmacies']);
+    this.router.navigate(['/pharmaciesAd']);
   }
 }

@@ -1,0 +1,15 @@
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    <div *ngFor="let pharmacy of pharmacies">
+    <div class="col">
+    <div class="card h-100">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{pharmacy.nom}}</h5>
+        <p class="card text">{{pharmacy.adresse}}</p>
+        <p class="card text">{{pharmacy.patente}}</p>
+        <p class="card text">{{pharmacy.tel}}</p>
+        <button class="btn btn-success" (click)="listMedicaments(pharmacy.id)">Medicaments</button>
+        </div></div>
+    </div>
+  </div>
+</div>

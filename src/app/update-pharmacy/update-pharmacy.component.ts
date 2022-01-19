@@ -34,7 +34,7 @@ export class UpdatePharmacyComponent implements OnInit {
   }
 
   updatePharmacy() {
-    this.pharmacyService.updatePharmacy(this.id, this.pharmacy)
+    this.pharmacyService.updatePharmacy(this.pharmacy)
       .subscribe(result => {
         console.log(result);
         this.pharmacy = new Pharmacy();

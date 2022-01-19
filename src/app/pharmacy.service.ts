@@ -7,23 +7,27 @@ import { Observable } from 'rxjs';
 })
 export class PharmacyService {
   
+  //private baseUrl = 'http://localhost:3000/pharmacies';
   private baseUrl = 'http://localhost:8080/api/pharmacie';
   constructor(private http: HttpClient) { }
 
   getPharmacy(id: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
-
+  
+  signInPharmacy(pharmacy: Object): Observable<Object> {
+    return this.http.post(`${this.baseUrl}/login`, pharmacy);
+  }
   createPharmacy(pharmacy: Object, id:number): Observable<Object> {
     return this.http.post(`${this.baseUrl}/${id}`, pharmacy);
   }
 
-  updatePharmacy(id: number, pharmacy: Object): Observable<Object> {
-    return this.http.put(`${this.baseUrl}/update/${id}`, pharmacy);
+  updatePharmacy(pharmacy: Object): Observable<Object> {
+    return this.http.put(`${this.baseUrl}/update`, pharmacy);
   }
 
   deletePharmacy(pharmacy: Object): Observable<Object> {
-    return this.http.delete(`${this.baseUrl}/delete`, pharmacy);
+    return this.http.delete(`${this.baseUrl}/delete`, {body: pharmacy});
   }
 
   getPharmaciesList(): Observable<any> {

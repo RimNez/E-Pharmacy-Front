@@ -3,6 +3,9 @@
         <button type="submit" (click)="addPharmacy()" class="btn btn-success">Add Pharmacy</button>
     </div>
     <div class="panel-heading">
+        <button type="submit" (click)="createMedicament()" class="btn btn-success">Add Pharmacy</button>
+    </div>
+    <div class="panel-heading">
         <h1>Pharmacies</h1>
     </div>
     <div class="panel-body">
@@ -24,7 +27,7 @@
                     <td>{{pharmacy.tel}}</td>
                    <!--<td><button class="btn btn-secondary" (click)="detailPharmacy(pharmacy.id)">Details</button></td>  -->       
                     <td><button class="btn btn-primary" (click)="updatePharmacy(pharmacy.id,pharmacy)">Update</button></td>
-                    <td><button class="btn btn-danger" (click)="deletePharmacy(pharmacy.id)">Delete</button></td>
+                    <td><button class="btn btn-danger" (click)="deletePharmacy(pharmacy)">Delete</button></td>
                 </tr>
             </tbody>
         </table>

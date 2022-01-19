@@ -27,8 +27,8 @@ export class ListPharmacyComponent implements OnInit {
       this.pharmacies = data;
     })
   }
-  deletePharmacy(id: number) {
-    this.pharmacyService.deletePharmacy(id)
+  deletePharmacy(pharmacy :Pharmacy) {
+    this.pharmacyService.deletePharmacy(pharmacy)
       .subscribe(
         data => {
           console.log(data);
@@ -38,7 +38,7 @@ export class ListPharmacyComponent implements OnInit {
   }
  
   updatePharmacy(id: number,pharmacy :Pharmacy){
-    this.pharmacyService.updatePharmacy(id,pharmacy).subscribe(
+    this.pharmacyService.updatePharmacy(pharmacy).subscribe(
       data => {
         console.log(data);
         this.reloadData();
@@ -46,8 +46,7 @@ export class ListPharmacyComponent implements OnInit {
       },
       error => console.log(error));    
   }
-/*
-  detailPharmacy(id: number){
-    this.router.navigate(['detailsPharmacy', id]);
-  }*/
+  createMedicament() {
+       this.router.navigate(['createMedicament']);
+  }
 }

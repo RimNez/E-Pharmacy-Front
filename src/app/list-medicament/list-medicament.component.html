@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+      <h1>Medicaments</h1>
+  </div>
+  <div class="panel-body">
+      <table class="table table-striped table-bordered">
+          <thead>
+              <tr>
+                  <th>Nom</th>
+                  <th>Description</th>
+                  <th>Prix</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let medicament of medicaments">
+                  <td>{{medicament.nom}}</td>
+                  <td>{{medicament.description}}</td>
+                  <td>{{medicament.prix}}</td>     
+                  <td><button class="btn btn-primary" (click)="addMedicament(medicament.id)">Add</button></td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
+
+

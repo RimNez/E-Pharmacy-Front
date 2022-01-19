@@ -1,0 +1,72 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+		<div [hidden]="!submitted">
+			<div class="alert alert-success" role="alert">
+				<strong>You submitted successfully! Go back</strong>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="bg-contact3" style="background-image: url('images/bg-01.jpg');">
+	<div class="container-contact3">
+		<div class="wrap-contact3">
+			<form (ngSubmit)="onSubmit()"class="contact3-form validate-form">
+				<span class="contact3-form-title">
+                	Medicaments
+				</span>
+				<div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" class="form-control" id="nom" required [(ngModel)]="medicament.nom" name="nom">
+                </div>
+        
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" class="form-control" id="description" required [(ngModel)]="medicament.description" name="description">
+                </div>
+        
+                <div class="form-group">
+                    <label for="prix">Prix</label>
+                    <input type="number" class="form-control" id="prix" required [(ngModel)]="medicament.prix" name="prix">
+                </div>
+        
+				<div  class="container-contact3-form-btn">
+					<button type="submit" class="contact3-form-btn">
+						Submit
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
