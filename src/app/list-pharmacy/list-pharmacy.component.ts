@@ -38,7 +38,7 @@ export class ListPharmacyComponent implements OnInit {
   }
  
   updatePharmacy(id: number,pharmacy :Pharmacy){
-    this.pharmacyService.updatePharmacy(id,pharmacy).subscribe(
+    this.pharmacyService.updatePharmacy(pharmacy).subscribe(
       data => {
         console.log(data);
         this.reloadData();

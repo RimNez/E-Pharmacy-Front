@@ -9,4 +9,6 @@ export class Pharmacy {
     patente : string;
     //@ts-ignore
     tel : string;
+    //@ts-ignore
+    medicaments: any;
 }

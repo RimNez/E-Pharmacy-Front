@@ -1,0 +1,22 @@
+{
+  "medicaments": [
+    {
+      "idPharmacy": 0,
+      "nom": "dolipran",
+      "description": "doli",
+      "prix": 20,
+      "id": 1
+    },
+    {
+      "idPharmacy": 0,
+      "nom": "amoxil",
+      "description": "amoxil",
+      "prix": 45,
+      "id": 2
+    }
+  ],
+  "pharmacies": [
+    {
+    }
+  ]
+}
