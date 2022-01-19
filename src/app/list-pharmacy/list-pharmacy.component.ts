@@ -27,8 +27,8 @@ export class ListPharmacyComponent implements OnInit {
       this.pharmacies = data;
     })
   }
-  deletePharmacy(id: number) {
-    this.pharmacyService.deletePharmacy(id)
+  deletePharmacy(pharmacy :Pharmacy) {
+    this.pharmacyService.deletePharmacy(pharmacy)
       .subscribe(
         data => {
           console.log(data);
