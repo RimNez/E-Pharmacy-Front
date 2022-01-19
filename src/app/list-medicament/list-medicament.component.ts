@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Medicament } from '../medicament';
 import { MedicamentService } from '../medicament.service';
+import { Pharmacy } from '../pharmacy';
 
 @Component({
   selector: 'app-list-medicament',
@@ -27,10 +28,19 @@ export class ListMedicamentComponent implements OnInit {
   addMedicament(id:number) {
     this.medicamentService.getMedicament(id)
         .subscribe(data => {
+          console.log(data)
           this.medicament=data;
+          this.medicament.pharmacy=new Pharmacy();    
+      this.medicament.pharmacy.id = parseInt(localStorage.getItem('pharmacyId') || 'null');   
+      this.medicament.id = 0; 
+    this.medicamentService.addMedicament(this.medicament).subscribe(
+      data => {
+        console.log(data)
+      }, error => console.log(error)
+    );
         }, error => console.log(error));
-    this.medicament.pharmacy.id = parseInt(localStorage.getItem('pharmacyId') || 'null');   
-    this.medicament.id = 0; 
-    this.medicamentService.addMedicament(this.medicament);
+    
+    console.log(this.medicament)
+    
   }
 }
