@@ -31,4 +31,8 @@ export class CommandeService {
   getCommandesList(): Observable<any> {
     return this.http.get(`${this.baseUrl}/`);
   }
+
+  modifierEtat(id:number): Observable<any> {
+    return this.http.put(`${this.baseUrl}/`,id);
+  }
 }

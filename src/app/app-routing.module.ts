@@ -6,6 +6,7 @@ import { CreatePharmacyComponent } from './create-pharmacy/create-pharmacy.compo
 import { ListMedicamentComponent } from './list-medicament/list-medicament.component';
 import { ListPharmaciesComponent } from './list-pharmacies/list-pharmacies.component';
 import { ListPharmacyComponent } from './list-pharmacy/list-pharmacy.component';
+import { ListeCommandesComponent } from './liste-commandes/liste-commandes.component';
 import { MedicamentsPharmacieComponent } from './medicaments-pharmacie/medicaments-pharmacie.component';
 import { UpdatePharmacyComponent } from './update-pharmacy/update-pharmacy.component';
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'createMedicament', component: CreateMedicamentComponent },
   { path: 'medicaments', component: ListMedicamentComponent },
   { path: 'ph', component: ListPharmaciesComponent },
+  { path: 'commandes', component: ListeCommandesComponent },
 ];
 
 @NgModule({
