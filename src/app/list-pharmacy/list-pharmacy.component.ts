@@ -46,8 +46,7 @@ export class ListPharmacyComponent implements OnInit {
       },
       error => console.log(error));    
   }
-/*
-  detailPharmacy(id: number){
-    this.router.navigate(['detailsPharmacy', id]);
-  }*/
+  createMedicament() {
+       this.router.navigate(['createMedicament']);
+  }
 }
