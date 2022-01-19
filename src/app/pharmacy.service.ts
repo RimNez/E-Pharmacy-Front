@@ -27,7 +27,7 @@ export class PharmacyService {
   }
 
   deletePharmacy(pharmacy: Object): Observable<Object> {
-    return this.http.delete(`${this.baseUrl}/delete`, pharmacy);
+    return this.http.delete(`${this.baseUrl}/delete`, {body: pharmacy});
   }
 
   getPharmaciesList(): Observable<any> {
