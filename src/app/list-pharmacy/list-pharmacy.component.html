@@ -1,9 +1,16 @@
 <div class="panel panel-default">
     <div class="panel-heading">
+        <button type="submit" (click)="createMedicament()" class="btn btn-success">Create Medicament</button>
+    </div>
+    <div class="panel-heading">
+        <button type="submit" (click)="listCommandes()" class="btn btn-success">List Commands</button>
+    </div>
+    <div class="panel-heading">
         <button type="submit" (click)="addPharmacy()" class="btn btn-success">Add Pharmacy</button>
-
         <button type="submit" (click)="createMedicament()" class="btn btn-info">Add Medicament</button>
     </div>
+    </div>
+    
     <div class="panel-heading">
         <h1>Pharmacies</h1>
     </div>
@@ -23,13 +30,11 @@
                     <td>{{pharmacy.nom}}</td>
                     <td>{{pharmacy.adresse}}</td>
                     <td>{{pharmacy.patente}}</td>
-                    <td>{{pharmacy.tel}}</td>
-                   <!--<td><button class="btn btn-secondary" (click)="detailPharmacy(pharmacy.id)">Details</button></td>  -->       
+                    <td>{{pharmacy.tel}}</td>     
                     <td><button class="btn btn-primary" (click)="updatePharmacy(pharmacy.id,pharmacy)">Update</button></td>
                     <td><button class="btn btn-danger" (click)="deletePharmacy(pharmacy)">Delete</button></td>
                 </tr>
             </tbody>
         </table>
     </div>
-</div>
 

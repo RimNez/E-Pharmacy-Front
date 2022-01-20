@@ -42,11 +42,14 @@ export class ListPharmacyComponent implements OnInit {
       data => {
         console.log(data);
         this.reloadData();
-        this.router.navigate(['updatePharmacy', pharmacy.id]);
+        this.router.navigate(['/updatePharmacy', pharmacy.id]);
       },
       error => console.log(error));    
   }
   createMedicament() {
-       this.router.navigate(['createMedicament']);
+       this.router.navigate(['/createMedicament']);
+  }
+  listCommandes() {
+    this.router.navigate(['/commandes']);
   }
 }

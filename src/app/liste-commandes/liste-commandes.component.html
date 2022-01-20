@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h1>Commandes</h1>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Total Prix</th>
+                    <th>Etat</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let commande of commandes">
+                    <td>{{commande.date}}</td>
+                    <td>{{commande.totalPrix}}</td>
+                    <td>{{commande.etat}}</td>
+                    <td><button class="btn btn-primary" (click)="modifierEtat(commande.id)">Modifier etat</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

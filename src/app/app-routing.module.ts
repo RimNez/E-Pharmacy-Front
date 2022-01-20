@@ -7,6 +7,7 @@ import { CreatePharmacyComponent } from './create-pharmacy/create-pharmacy.compo
 import { ListMedicamentComponent } from './list-medicament/list-medicament.component';
 import { ListPharmaciesComponent } from './list-pharmacies/list-pharmacies.component';
 import { ListPharmacyComponent } from './list-pharmacy/list-pharmacy.component';
+import { ListeCommandesComponent } from './liste-commandes/liste-commandes.component';
 import { MedicamentsPharmacieComponent } from './medicaments-pharmacie/medicaments-pharmacie.component';
 import { UpdatePharmacyComponent } from './update-pharmacy/update-pharmacy.component';
 import { AuthGuard } from './auth/auth.guard';
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'createMedicament', component: CreateMedicamentComponent, canActivate: [AuthGuard] },
   { path: 'medicaments', component: ListMedicamentComponent , canActivate: [AuthGuard]},
   { path: 'ph', component: ListPharmaciesComponent , canActivate: [AuthGuard]},
+  { path: 'commandes', component: ListeCommandesComponent , canActivate: [AuthGuard]},
 ];
 
 @NgModule({

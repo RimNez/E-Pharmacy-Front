@@ -15,6 +15,7 @@ import { CreateMedicamentComponent } from './create-medicament/create-medicament
 import { ListMedicamentComponent } from './list-medicament/list-medicament.component';
 import { MedicamentsPharmacieComponent } from './medicaments-pharmacie/medicaments-pharmacie.component';
 import { RegisterFormComponent } from './auth/register-form/register-form.component';
+import { ListeCommandesComponent } from './liste-commandes/liste-commandes.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RegisterFormComponent } from './auth/register-form/register-form.compon
     CreateMedicamentComponent,
     ListMedicamentComponent,
     RegisterFormComponent,
-    MedicamentsPharmacieComponent
+    MedicamentsPharmacieComponent,
+    ListeCommandesComponent
   ],
   imports: [
     BrowserModule,
