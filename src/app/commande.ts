@@ -1,3 +1,4 @@
+import { Pharmacy } from "./pharmacy";
 import { User } from "./user";
 
 export class Commande {
@@ -14,7 +15,9 @@ export class Commande {
     //@ts-ignore
     idPharmacy : number;
     //@ts-ignore
-    medicaments:any;
+    medicaments:any=[];
     //@ts-ignore
     user : User;
+    //@ts-ignore
+    pharmacy : Pharmacy;
 }

@@ -1,7 +1,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <h1>Medicaments</h1>
-        <td><button class="btn btn-primary" (click)="ValiderCommande()">Valider Commandes</button></td>
+        <td><button class="btn btn-primary" (click)="ValiderCommande()">Valider la commande</button></td>
     </div>
 
     <div class="panel-body">
@@ -11,7 +11,7 @@
                     <th>Nom</th>
                     <th>Description</th>
                     <th>Prix</th>
-                    <th colspan="3">Actions</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -19,7 +19,7 @@
                     <td>{{medicament.nom}}</td>
                     <td>{{medicament.description}}</td>
                     <td>{{medicament.prix}}</td>     
-                    <td><button class="btn btn-primary" (click)="ComanderMedicament(medicament.id)">Command</button></td>
+                    <td><button class="btn btn-primary" (click)="ComanderMedicament(medicament.id)">Commander</button></td>
                 </tr>
             </tbody>
         </table>

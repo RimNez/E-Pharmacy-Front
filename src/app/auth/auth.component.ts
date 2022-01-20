@@ -15,13 +15,13 @@ export class AuthComponent implements OnInit {
   login : string = '';
   password : string = '';
   //@ts-ignore
-  pharmacy : any;
+  pharmacy : Pharmacy =new Pharmacy();
    //@ts-ignore
-  user : any;
+  user: User = new User();
+  user1:any;
   constructor(private router: Router, private pharmacyService: PharmacyService, private userService: UserService) { }
 
   ngOnInit(): void {
-    
   }  
   
   getRadioValue(choice:string) {
@@ -39,7 +39,6 @@ export class AuthComponent implements OnInit {
       if(this.login === 'admin@gmail.com' && this.password === 'admin' ) {
         localStorage.setItem('adminId', JSON.stringify(1));
         localStorage.setItem('type', "admin");
-        console.log("Hello");
         this.router.navigate(['/pharmaciesAd']);
      }
     }
@@ -51,9 +50,9 @@ export class AuthComponent implements OnInit {
           if (data == null) {
             (error: any) => console.log(error);
           } else {
-            this.pharmacy = data;
+            this.user1 = data;
             console.log(this.pharmacy);
-            localStorage.setItem('pharmacyId', JSON.stringify(this.pharmacy.id))
+            localStorage.setItem('pharmacyId', JSON.stringify(this.user1.id))
             localStorage.setItem('type', "pharmacy")
           }
         });{
@@ -62,19 +61,20 @@ export class AuthComponent implements OnInit {
      }
     }
   if(this.valueR === 'user') {
-    this.user.login = this.login;
+    console.log(this.login,"-----------",this.password)
+    this.user.email = this.login;
       this.user.password = this.password;
       this.userService
         .signInUser(this.user).subscribe(data => {
           if (data == null) {
-            (error: any) => console.log(error);
+            (error: any) => console.log("Acces denied ");
           } else {
-            this.user = data;
+            this.user1 = data;
             console.log(this.user);
-            localStorage.setItem('userId', JSON.stringify(this.user.id))
+            localStorage.setItem('userId', JSON.stringify(this.user1.id))
             localStorage.setItem('type', "user")
+            this.router.navigate(['/pharmacies']);
           }
-          this.router.navigate(['/pharmacies']);
         });
   }}
 }
